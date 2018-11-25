@@ -1,11 +1,21 @@
+---
+title: Vlastnosti
+description: Zjistěte všechno o schopnostech a funkcích Ubuntu pro osobní počítače a jeho výchozích aplikacích.
+permalink: /desktop/vlastnosti
+redirect_from:
+  - /aplikace-a-hry
+  - /desktop-features
+  - /desktop/features
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container top" style="background-image: url('images/ubuntu-features-hero.jpg');"></div>
+		<div class="bg-container fixed-container top" style="background-image: url('{{ 'images/ubuntu-features-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro higher">
 				<h1>Vlastnosti Ubuntu</h1>
 				<p>Ubuntu samo o sobě nabízí velmi robustní a uživatelsky přívětivou základnu pro jakoukoliv vaši práci. Má také širokou podporu vývojářů nejrůznějšího softwaru. Naleznete zde několik různých kancelářských balíků, grafických a multimediálních nástrojů, velké množství her i nespočet nástrojů pro pokročilé uživatele.</p>
-				<a href="<?php $pagesHolder->getPageUrl("desktop-download"); ?>" class="button">Stáhnout Ubuntu</a>
+				<a href="{% link _pages/ziskat-ubuntu/stahnout-desktop/index.html %}" class="button">Stáhnout Ubuntu</a>
 			</div>
 		</div>
 	</div>
@@ -15,7 +25,7 @@
 		<article class="padded info">
 			<h2>Celý svět aplikací</h2>
 			<p>Ubuntu nabízí tisíce aplikací ke stažení. Většina je k dispozici zdarma a pro jejich instalaci stačí jen pár kliků.</p>
-			<?php $basic = false; include("parts/apps-games-overview.php"); ?>
+			{% include apps-games-overview-rich.html %}
 		</article>
 	</div>
 </section>
@@ -31,7 +41,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/libreoffice.jpg" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/libreoffice.jpg' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -41,13 +51,13 @@
 <section class="hero">
 	<div class="img-container">
 		<div class="img-container">
-			<div class="bg-container top mobile-bg" style="background-image: url('images/screenshots/ubuntu-18.04/desktop.png');"></div>
+			<div class="bg-container top mobile-bg" style="background-image: url('{{ 'images/screenshots/ubuntu-18.04/desktop.png' | relative_url }}');"></div>
 			<div class="wrapper">
 				<div class="row-boxes vertical-center two">
 					<ul>
 						<li>
 							<div class="box">
-								<img src="images/screenshots/firefox.png" alt="screehshot" class="responsive">
+								<img src="{{ 'images/screenshots/firefox.png' | relative_url }}" alt="screehshot" class="responsive">
 							</div>
 						</li>
 						<li>
@@ -74,7 +84,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/thunderbird.jpg" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/thunderbird.jpg' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -84,7 +94,7 @@
 <section class="hero">
 	<div class="img-container">
 		<div class="img-container">
-			<div class="bg-container mobile-bg" style="background-image: url('images/mountains-hero.jpg');"></div>
+			<div class="bg-container mobile-bg" style="background-image: url('{{ 'images/mountains-hero.jpg' | relative_url }}');"></div>
 			<div class="wrapper">
 				<div class="row-boxes vertical-center two">
 					<ul>
@@ -111,7 +121,7 @@
 					<div class="box">
 						<h2>Organizujte vaše fotografie</h2>
 						<p>S předinstalovanou aplikací Shotwell můžete rychle a jednoduše importovat, organizovat, upravovat a prohlížet vaše fotografie. Snímky můžete také sdílet nejen s rodinou, kamarády a známými, ale také přímo na oblíbených stránkách a sociálních sítích.</p>
-						<img src="images/screenshots/shotwell.jpg" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/shotwell.jpg' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -119,10 +129,10 @@
 						<h2>Upravujte a tvořte</h2>
 						<p>Upravujte fotografie nebo vytvářejte profesionální návrhy a ilustrace s velmi oblíbenými nástroji jako jsou Gimp nebo Inkscape, dostupnýmí zdarma přímo v obchodě Ubuntu.</p>
 						<ul class="inline-icons highlightable">
-							<li title="Gimp"><a href="https://snapcraft.io/gimp"><img src="images/icons/gimp.png" alt="Gimp"></a></li>
-							<li title="Inkscape"><a href="https://snapcraft.io/inkscape"><img src="images/icons/inkscape.png" alt="Inkscape"></a></li>
-							<li title="Blender"><a href="https://www.blender.org/"><img src="images/icons/blender.png" alt="Blender"></a></li>
-							<li title="Lightworks"><a href="https://www.lwks.com/"><img src="images/icons/lightworks.png" alt="Lightworks"></a></li>
+							<li title="Gimp"><a href="https://snapcraft.io/gimp"><img src="{{ 'images/icons/gimp.png' | relative_url }}" alt="Gimp"></a></li>
+							<li title="Inkscape"><a href="https://snapcraft.io/inkscape"><img src="{{ 'images/icons/inkscape.png' | relative_url }}" alt="Inkscape"></a></li>
+							<li title="Blender"><a href="https://www.blender.org/"><img src="{{ 'images/icons/blender.png' | relative_url }}" alt="Blender"></a></li>
+							<li title="Lightworks"><a href="https://www.lwks.com/"><img src="{{ 'images/icons/lightworks.png' | relative_url }}" alt="Lightworks"></a></li>
 						</ul>
 					</div>
 				</li>
@@ -142,7 +152,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/totem.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/totem.png' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -152,7 +162,7 @@
 <section class="hero">
 	<div class="img-container">
 		<div class="img-container">
-			<div class="bg-container mobile-bg" style="background-image: url('images/gaming-hero.jpg');"></div>
+			<div class="bg-container mobile-bg" style="background-image: url('{{ 'images/gaming-hero.jpg' | relative_url }}');"></div>
 			<div class="wrapper">
 				<div class="row-boxes vertical-center two mobile-reverse">
 					<ul>
@@ -199,7 +209,7 @@
 					<div class="box">
 						<h3>Začněte ještě dnes</h3>
 						<p>Stáhněte si Ubuntu pro váš osobní počítač a začněte ho používat ještě dnes, ať již chcete nahradit váš stávající oprační systém nebo provozovat Ubuntu vedle něj.</p>
-						<a href="<?php $pagesHolder->getPageUrl("desktop-download"); ?>" class="text">Získat Ubuntu</a>
+						<a href="{% link _pages/ziskat-ubuntu/stahnout-desktop/index.html %}" class="text">Získat Ubuntu</a>
 					</div>
 				</li>
 				<li>
@@ -214,7 +224,7 @@
 					<div class="box">
 						<h3>Odnože Ubuntu</h3>
 						<p>Odnože Ubuntu poskytují unikátní způsob, jak poznat Ubuntu. S různým výběrem předinstalovaných aplikací, prostředí a odlišným nastavením, přitom s přístupem ke všem aplikacím a aktualizacím dostupným přímo pro Ubuntu.</p>
-						<a href="<?php $pagesHolder->getPageUrl("get-flavours"); ?>" class="text">Prohlídněte si možné variace Ubuntu</a>
+						<a href="{% link _pages/ziskat-ubuntu/odnoze-ubuntu.html %}" class="text">Prohlídněte si možné variace Ubuntu</a>
 					</div>
 				</li>
 			</ul>

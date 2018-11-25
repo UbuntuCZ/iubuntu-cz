@@ -1,89 +1,38 @@
-<?php
-	require_once("objecvitesite.php");
-	$pagesHolder = PagesHolder::getInstance();
-	require_once("pages.php");
-	
-	$currentPage = $pagesHolder->getCurrentPage();
-?>
-
 <!DOCTYPE html>
 
 <html lang="cs">
 <head>
-	<title>Ubuntu<?php if($currentPage != null) { echo " - " . $currentPage->name; } ?> | Česká republika</title>
-	<meta charset="utf-8">
-	<base href="<?php echo getSitePath(); ?>">
-	<link rel="stylesheet" href="design/style.css">
-	<link rel="stylesheet" href="design/fonts/fonts.css">
-	<meta name="description" content="<?php if($currentPage != null && $currentPage->description) { echo $currentPage->description; } else { echo "Ubuntu je operační systém se svobodnou licencí, který nachází uplatnění na osobních počítačích a serverech stejně jako v cloudu a ve světě internetu věcí."; } ?>">
-	<meta name="keywords" content="<?php if($currentPage != null && $currentPage->keywords) { echo $currentPage->keywords; } else { echo "Ubuntu, free, opensource, software, operační systém, Linux, zdarma, bezplatný, windows, náhrada, svižný, bezpečný, inovace, novinky, aktualizace, obchod, bez virů, herní."; } ?>">
-	<meta name="author" content="Martin Kozub">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="google-site-verification" content="google98a19569eb1c873d">
-	<meta name="theme-color" content="#E95420" />
-<?php if($currentPage != null) : ?>
-	<link rel="canonical" href="<?= "./" . $currentPage->path; ?>">
-	<link rel="alternate" href="<?= "./index.php?page=" . $currentPage->url; ?>">
-<?php endif; ?>
-	<link rel="shortcut icon" href="design/icon.ico" type="image/x-icon">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"> -->
-	<meta property="og:type" content="website">
-<?php if($currentPage != null) : ?>
-	<meta property="og:title" content="<?= $currentPage->name; ?>">
-	<meta property="og:url" content="<?= "./" . $currentPage->path; ?>">
-<?php endif; ?>
-	<meta property="og:image" content="images/icons/picto-ubuntu.svg"> 
-	<meta property="og:site_name" content="iUbuntu.cz">
+  {% include head.html %}
 </head>
 
 <body>
 	<header>
 		<div class="wrapper">
 			<a href="." class="title">Ubuntu</a>
-			
+
 			<nav>
-				<?php
-					$menuData = generareMenu();
-					$section = array_pop($menuData);
-				?>
+				{% include menu.html %}
 			</nav>
-			
+
 			<div class="menuHide" onclick="toggleClassName(this.parentNode.parentNode, 'show');">
 				<span></span><span></span><span></span><span></span>
 			</div>
 		</div>
 	</header>
-	
-	<?php generareSubMenu($section); ?>
-	
+
+	{% include submenu.html %}
+
 	<main>
 		<div id="pager"></div>
-		
-		<?php
-			if(isset($_GET["page"])) {
-				$page = $_GET["page"];
-				if(file_exists("pages/${page}.php")) {
-					include("pages/${page}.php");
-				}
-				else {
-					include("pages/error.php");
-				}
-			}
-			else {
-				include("pages/home.php");
-			}
-		?>
+
+		{{ content }}
 	</main>
-	
+
 	<footer>
 		<div class="section">
 			<div class="wrapper">
 				<nav>
-					<?php
-						$config = array_pop($menuData);
-						generareFooterMenu($config);
-					?>
+					{% include footermenu.html %}
 				</nav>
 			</div>
 		</div>
@@ -118,11 +67,11 @@
 			</div>
 		</div>
 		<div class="section white">
-			<p>2012 - <?php echo date("Y"); ?> iubuntu.cz, &copy; Canonical Ltd. Ubuntu a Canonical jsou registrovanými známkami společnosti Canonical Ltd.</p>
+			<p>2012 - {{ site.time | date: '%Y' }} iubuntu.cz, &copy; Canonical Ltd. Ubuntu a Canonical jsou registrovanými známkami společnosti Canonical Ltd.</p>
 		</div>
 	</footer>
-	
-	<link rel="stylesheet" href="design/core-elements.css">
+
+	<link rel="stylesheet" href="{{ 'design/core-elements.css' | relative_url }}">
 	<script>
 		"use strict";
 		function toggleClassName(element, className) {
@@ -134,18 +83,18 @@
 			}
 		}
 	</script>
-	
-	<script src="design/header.js"></script>
+
+	<script src="{{ 'design/header.js' | relative_url }}"></script>
 	<script>
 		new Header();
 	</script>
-	
-	<script src="design/breadcrumbs.js"></script>
+
+	<script src="{{ 'design/breadcrumbs.js' | relative_url }}"></script>
 	<script>
 		new Breadcrumbs();
 	</script>
-	
-	<script src="design/pagerES6.js"></script>
+
+	<script src="{{ 'design/pagerES6.js' | relative_url }}"></script>
 	<script>
 		new Pager({
 			container: document.getElementById("pager"),

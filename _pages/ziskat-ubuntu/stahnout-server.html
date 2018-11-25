@@ -1,6 +1,12 @@
+---
+title: Stáhnout Ubuntu Server
+description: Získejte instalační obraz Ubuntu pro váš osobní či firemní server, cloud nebo třeba zařízení z kategorie IoT.
+permalink: /ziskat-ubuntu/stahnout-server
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container" style="background-image: url('images/server-livepatch-hero.jpg');"></div>
+		<div class="bg-container fixed-container" style="background-image: url('{{ 'images/server-livepatch-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro higher">
 				<h1>Stáhnout Ubuntu server</h1>
@@ -46,7 +52,7 @@
 					</li>
 					<li>
 						<div class="box">
-							<img src="images/small/image-server.svg" alt="ubuntu on raspberry-pi" class="responsive">
+							<img src="{{ 'images/small/image-server.svg' | relative_url }}" alt="ubuntu on raspberry-pi" class="responsive">
 						</div>
 					</li>
 				</ul>
@@ -71,14 +77,14 @@
 					<div class="box">
 						<h2 id="standard">Ubuntu <?php echo $relularRelease->number; ?></h2>
 						<p>Nejnovější vydání Ubuntu pro počítače a notebooky. Ubuntu <?php echo $relularRelease->number . " " . $relularRelease->name; ?> přináší 9 měcíců bezpečnostních a údržbových aktualizací.</p>
-						<p>Pro konzervativnější a déle podporované vydání stahujte <a href="<?php $pagesHolder->getPageUrl("server-download"); ?>#lts" class="text blue">Ubuntu s dlouhodobou podporou výše</a></p>
+						<p>Pro konzervativnější a déle podporované vydání stahujte <a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/stahnout-server.html %}#lts" class="text blue">Ubuntu s dlouhodobou podporou výše</a></p>
 						<p><a href="http://releases.ubuntu.com/<?php echo $relularRelease->number; ?>/ubuntu-<?php echo $relularRelease->number; ?>-desktop-amd64.iso" id="standard-download-link" class="button green">Stáhnout Ubuntu <?php echo $relularRelease->number; ?> (64bit)</a></p>
 						<p><a href="http://cdimage.ubuntu.com/releases/<?php echo $relularRelease->number; ?>/release" class="text blue">Alternativní obrazy pro další architektury</a></p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
-						
+
 					</div>
 				</li>
 			</ul>
@@ -132,13 +138,13 @@
 	</div>
 </section>
 
-<script src="design/translator.js"></script>
-<script src="design/release.js"></script>
+<script src="{{ 'design/translator.js' | relative_url }}"></script>
+<script src="{{ 'design/release.js' | relative_url }}"></script>
 <script>
 	"use strict";
 	// Update release number and get other data
 	let translator = new ENCZTranslator();
-	
+
 	let ltsRelase = new Release({
 		version: "<?php echo $ltsRelease->number; ?>",
 		type: "server",
@@ -146,7 +152,7 @@
 		old: true,
 		translator
 	}).appendTo(document.querySelector("a#lts-download-link"));
-	
+
 	let standardRelease = new Release({
 		version: "<?php echo $relularRelease->number; ?>",
 		type: "server",
@@ -154,13 +160,13 @@
 		old: true,
 		translator
 	}).appendTo(document.querySelector("a#standard-download-link"));
-	
+
 	window.setTimeout(() => {
 		ltsRelase.refresh({
 			old: false
 		});
 	}, 1000);
-	
+
 	window.setTimeout(() => {
 		standardRelease.refresh({
 			old: false

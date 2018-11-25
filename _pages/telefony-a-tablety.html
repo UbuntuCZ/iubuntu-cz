@@ -1,9 +1,15 @@
+---
+title: Telefony a tablety
+description: Ubuntu pod záštitou komunity UBports pro telefony a tablety.
+permalink: /telefony-a-tablety
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container" style="background-image: url('images/ubports/phone-taking-photo-hero.jpg');"></div>
+		<div class="bg-container fixed-container" style="background-image: url('{{ 'images/ubports/phone-taking-photo-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro higher transparent text-white">
-				<img src="images/ubports/logo/ubports-logo.png" alt="ubports-logo" style="float: right; width: 64px; background: rgba(255, 255, 255, 0.5); box-shadow: 0px 0px 20px 30px rgba(255, 255, 255, 0.5);">
+				<img src="{{ 'images/ubports/logo/ubports-logo.png' | relative_url }}" alt="ubports-logo" style="float: right; width: 64px; background: rgba(255, 255, 255, 0.5); box-shadow: 0px 0px 20px 30px rgba(255, 255, 255, 0.5);">
 				<h1>Ubuntu Touch</h1>
 				<h2>Bezpečnější, atraktivní,<br>volně dostupný a zdarma.</h2>
 				<p>Mobilní operační systém pod záštitou komunity UBports.</p>
@@ -20,9 +26,9 @@
 					document.querySelector(".hero .bg-container.fixed-container").classList.remove("bottom");
 				}
 			}
-			
+
 			heroAdapt();
-			
+
 			window.addEventListener("resize", (event) => {
 				heroAdapt();
 			});
@@ -44,7 +50,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/ubports/convergence.gif" alt="UBports devices overview" class="responsive">
+						<img src="{{ 'images/ubports/convergence.gif' | relative_url }}" alt="UBports devices overview" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -57,7 +63,7 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/ubports/phone-scopes.jpg" alt="Ubuntu scopes" class="responsive">
+						<img src="{{ 'images/ubports/phone-scopes.jpg' | relative_url }}" alt="Ubuntu scopes" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -73,7 +79,7 @@
 <section class="hero">
 	<div class="img-container">
 		<div class="img-container">
-			<div class="bg-container mobile-bg" style="background-image: url('images/ubports/phone-beautiful-features.jpg');"></div>
+			<div class="bg-container mobile-bg" style="background-image: url('{{ 'images/ubports/phone-beautiful-features.jpg' | relative_url }}');"></div>
 			<div class="wrapper">
 				<div class="row-boxes vertical-center two">
 					<ul>
@@ -85,7 +91,7 @@
 						</li>
 						<li>
 							<div class="box" style="height: 400px;">
-								
+
 							</div>
 						</li>
 					</ul>
@@ -100,14 +106,14 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/ubports/phone-devices-row.png" alt="Ubuntu devices overview" class="responsive">
+						<img src="{{ 'images/ubports/phone-devices-row.png' | relative_url }}" alt="Ubuntu devices overview" class="responsive">
 					</div>
 				</li>
 				<li>
 					<div class="box">
 						<h3>Dostupné na celé řadě zařízení</h3>
 						<p>Pokud jste majiteli některého z podporovaných mobilních zařízení nebo uvažujete o nákupu mobilního telefonu, jež umožňuje běh Ubuntu Touch, můžete si Ubuntu na tento telefon nainstalovat sami s pomocí instalátoru UBports.</p>
-						<a href="<?php $pagesHolder->getPageUrl("get-phone"); ?>" class="button">Zařízení s Ubuntu</a>
+						<a href="{% link _pages/ziskat-ubuntu/ubuntu-zarizeni/index.html %}" class="button">Zařízení s Ubuntu</a>
 					</div>
 				</li>
 			</ul>
@@ -144,7 +150,7 @@
 							<h3>Nabité funkcemi</h3>
 							<p>Spouštějte všechny vaše oblíbené aplikace a jednoduše se mezi nimi přepínejte pouhým přejetím prstu skrze obrazovku za pomoci magických okrajů Ubuntu. Používejte domovskou sekci (tzv. Home scope) k hledání obsahu ve vašem zařízení a na internetu, a udržujte si svůj život a obsah organizovaný s chytrostí Ubuntu scopes.</p>
 						</div>
-						<img src="images/ubports/image-phone-featurecomplete.jpg" alt="ubuntu phone" class="responsive">
+						<img src="{{ 'images/ubports/image-phone-featurecomplete.jpg' | relative_url }}" alt="ubuntu phone" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -153,7 +159,7 @@
 							<h3>Připraven pro vás</h3>
 							<p>Se všemi důležitými aplikacemi vytvořenými profesionálně a specificky pro Ubuntu zařízení běží Ubuntu velmi dobře i na základních telefonech. Ubuntu netrpí neduhy Javy jako Android, používá ale stejné hardwarové ovladače a tak je snadné přinést ho uživetelům po celém světě a nabídnout jim tak lepší zážitek z používání svého zařízení.</p>
 						</div>
-						<img src="images/ubports/image-phone-readyforyourphone.jpg" alt="ubuntu phone" class="responsive">
+						<img src="{{ 'images/ubports/image-phone-readyforyourphone.jpg' | relative_url }}" alt="ubuntu phone" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -162,7 +168,7 @@
 							<h3>Vše co vývojáři potřebují</h3>
 							<p>Za pomocí SDK vytvářejte úžasné nativní aplikace nebo se vydejte cestou lehkých HTML5 utilit. Upravte webové aplikace snadno a rychle k nerozeznání od těch nativních pro své působení na Ubuntu zařízeních. S jedním systémem pro všechna zařízení může být jen jedna aplikace připravena jak pro použití na mobilech, tak tabletech i osobních počítačích ovládaných klávesnicí a myší.</p>
 						</div>
-						<img src="images/ubports/image-developers.jpg" alt="ubuntu phone" class="responsive">
+						<img src="{{ 'images/ubports/image-developers.jpg' | relative_url }}" alt="ubuntu phone" class="responsive">
 					</div>
 				</li>
 			</ul>

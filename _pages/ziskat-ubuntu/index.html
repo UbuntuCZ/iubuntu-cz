@@ -1,11 +1,20 @@
+---
+title: Získat Ubuntu
+description: Stáhněte si ubuntu pro některé z vašich zařízení, nebo získejte dodatečné aplikace a hry pro vaši existující instalaci Ubuntu.
+permalink: /ziskat-ubuntu
+redirect_from:
+  - /ke-stazeni
+  - /aplikace-a-hry/hry-a-zabava
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container top" style="background-image: url('images/desktop-hero-18.04.jpg');"></div>
+		<div class="bg-container fixed-container top" style="background-image: url('{{ 'images/desktop-hero-18.04.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro">
 				<h1>Získejte Ubuntu</h1>
 				<p>Ať už chcete oživit váš osobní počítač, herní stroj, mobilní zařízení, server, superpočítač či gadget, Ubuntu je zde pro vás. Nyní můžete mít týž operační systém na všech vašich zařízeních a již dále si nemusíte pamatovat odlišné přístupy ke správě na každém z nich.</p>
-				<a href="<?php $pagesHolder->getPageUrl("about"); ?>" class="button">Více o Ubuntu</a>
+				<a href="{{ site.baseurl }}{% link _pages/o-ubuntu/index.html %}" class="button">Více o Ubuntu</a>
 			</div>
 		</div>
 	</div>
@@ -19,25 +28,25 @@
 			<div class="user-switchable">
 				<ul>
 					<li class="desktop">
-						<a href="<?php $pagesHolder->getPageUrl("desktop-download"); ?>">
+						<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/stahnout-desktop/index.html %}">
 							<div class="content">
 								<span>Ubuntu Desktop</span>
 							</div>
 						</a>
 					</li><li class="server">
-						<a href="<?php $pagesHolder->getPageUrl("server-download"); ?>">
+						<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/stahnout-server.html %}">
 							<div class="content">
 								<span>Ubuntu Cloud a Server</span>
 							</div>
 						</a>
 					</li><li class="phone">
-						<a href="<?php $pagesHolder->getPageUrl("get-phone"); ?>">
+						<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/ubuntu-zarizeni/index.html %}">
 							<div class="content">
 								<span>Ubuntu Telefony a Tablety</span>
 							</div>
 						</a>
 					</li><li class="flavours">
-						<a href="<?php $pagesHolder->getPageUrl("get-flavours"); ?>">
+						<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/odnoze-ubuntu.html %}">
 							<div class="content">
 								<span>Odnože Ubuntu</span>
 							</div>
@@ -59,35 +68,35 @@
 				<ul>
 					<li>
 						<a href="http://store.steampowered.com/" class="box">
-							<img src="images/icons/steam.png" alt="Steam" class="responsive icon medium right">
+							<img src="{{ 'images/icons/steam.png' | relative_url }}" alt="Steam" class="responsive icon medium right">
 							<h2>Steam</h2>
 							<p>Prohlédnout obchod Steam</p>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.humblebundle.com/store" class="box">
-							<img src="images/icons/humblebundle.png" alt="HubmleBundle" class="responsive icon large right">
+							<img src="{{ 'images/icons/humblebundle.png' | relative_url }}" alt="HubmleBundle" class="responsive icon large right">
 							<h2>HumbleBundle</h2>
 							<p>Prohlédnout obchod HumbleBundle</p>
 						</a>
 					</li>
 					<li>
 						<a href="https://www.gog.com/" class="box">
-							<img src="images/icons/gog.png" alt="GOG" class="responsive icon large right">
+							<img src="{{ 'images/icons/gog.png' | relative_url }}" alt="GOG" class="responsive icon large right">
 							<h2>GoG</h2>
 							<p>Prohlédnout obchod GoG</p>
 						</a>
 					</li>
 					<!--<li>
 						<a href="http://www.desura.com/" class="box">
-							<img src="images/icons/desura.png" alt="Desura" class="responsive icon right">
+							<img src="{{ 'images/icons/desura.png' | relative_url }}" alt="Desura" class="responsive icon right">
 							<h2>Desura</h2>
 							<p>Prohlédnout obchod Desura</p>
 						</a>
 					</li>-->
 					<li>
 						<a href="https://itch.io/" class="box">
-							<img src="images/icons/itch-io.png" alt="itch.io" class="responsive icon large right">
+							<img src="{{ 'images/icons/itch-io.png' | relative_url }}" alt="itch.io" class="responsive icon large right">
 							<h2>itch.io</h2>
 							<p>Prohlédnout obchod itch.io</p>
 						</a>
@@ -115,11 +124,11 @@
 	<div class="wrapper">
 		<div class="padded">
 			<ul class="inline-icons">
-				<li title="Cities Skylines"><img src="images/icons/games/citiesskylines.png" alt="Cities Skylines" class="responsive"></li>
-				<li title="CounterStrike"><img src="images/icons/games/counterstrike.png" alt="CounterStrike" class="responsive"></li>
-				<li title="Dota 2"><img src="images/icons/games/dota2.png" alt="Dota 2" class="responsive"></li>
-				<li title="GRID Autosport"><img src="images/icons/games/gridautosport.png" alt="GRID Autosport" class="responsive"></li>
-				<li title="XCOOM2"><img src="images/icons/games/xcoom2.png" alt="XCOOM2" class="responsive"></li>
+				<li title="Cities Skylines"><img src="{{ 'images/icons/games/citiesskylines.png' | relative_url }}" alt="Cities Skylines" class="responsive"></li>
+				<li title="CounterStrike"><img src="{{ 'images/icons/games/counterstrike.png' | relative_url }}" alt="CounterStrike" class="responsive"></li>
+				<li title="Dota 2"><img src="{{ 'images/icons/games/dota2.png' | relative_url }}" alt="Dota 2" class="responsive"></li>
+				<li title="GRID Autosport"><img src="{{ 'images/icons/games/gridautosport.png' | relative_url }}" alt="GRID Autosport" class="responsive"></li>
+				<li title="XCOOM2"><img src="{{ 'images/icons/games/xcoom2.png' | relative_url }}" alt="XCOOM2" class="responsive"></li>
 			</ul>
 			<p>... a stovky dalších her například ve výše zmíněných katalozích.</p>
 		</div>

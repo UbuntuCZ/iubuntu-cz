@@ -1,11 +1,19 @@
+---
+title: Instalace Ubuntu
+description: Nevíte jak na instalaci Ubuntu na váš počítač? Je to snadné, zvládne to každý.
+permalink: /ziskat-ubuntu/stahnout-desktop/instalace
+redirect_from:
+  - /ke-stazeni/instalace
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container" style="background-image: url('images/desk-hero.jpg');"></div>
+		<div class="bg-container fixed-container" style="background-image: url('{{ 'images/desk-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro">
 				<h1>Instalace Ubuntu</h1>
 				<p>Ubuntu si můžete stáhnout a nainstalovat úplně sami, jednoduše a zcela zdarma. Celý proces přitom na většině počítačů zabere pouze pár minut.</p>
-				<a href="<?php $pagesHolder->getPageUrl("desktop-download"); ?>" class="button">Stáhnout Ubuntu</a>
+				<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/stahnout-desktop/index.html %}" class="button">Stáhnout Ubuntu</a>
 			</div>
 		</div>
 	</div>
@@ -16,12 +24,12 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/live-cd-desktop.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/live-cd-desktop.png' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/live-cd-install-keyboard.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/live-cd-install-keyboard.png' | relative_url }}" alt="screehshot" class="responsive">
 					</div>
 				</li>
 			</ul>

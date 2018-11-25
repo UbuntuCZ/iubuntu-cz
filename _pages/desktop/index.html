@@ -1,12 +1,23 @@
+---
+title: Desktop
+description: Ubuntu pro stolní počítače a notebooky je rychlé, bezpečné a stylové, dennodenně používané 50 miliony uživatelů po celém světě.
+permalink: /desktop
+redirect_from:
+  - /ubuntu
+  - /desktop/funkce
+  - /desktop/vzhled-ubuntu
+  - /desktop/proc-je-ubuntu-zdarma
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container top" style="background-image: url('images/screenshots/ubuntu-18.04/desktop.png');"></div>
+		<div class="bg-container top" style="background-image: url('{{ 'images/screenshots/ubuntu-18.04/desktop.png' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro higher transparent text-white">
 				<h1>Ubuntu pro desktop</h1>
 				<p>Rychlé, zdarma a až neuvěřitelně použitelné a snadné. Operační systém Ubuntu pohání miliony desktopových počítačů, notebooků, serverů i nejrůznějších mobilních zařízení, chytrých telefonů a tabletů po celém světě.</p>
-				<p><a href="<?php $pagesHolder->getPageUrl("desktop-download"); ?>" class="button">Stáhnout Ubuntu</a></p>
-				<a href="<?php $pagesHolder->getPageUrl("desktop-features"); ?>" class="text">Prohlédněte si Ubuntu detailněji</a>
+				<p><a href="{% link _pages/ziskat-ubuntu/stahnout-desktop/index.html %}" class="button">Stáhnout Ubuntu</a></p>
+				<a href="{% link _pages/desktop/vlastnosti.html %}" class="text">Prohlédněte si Ubuntu detailněji</a>
 			</div>
 		</div>
 	</div>
@@ -60,30 +71,30 @@
 		<article class="padded">
 			<h2>Pohled na Ubuntu 18.04 LTS</h2>
 		</article>
-		
+
 		<div class="row-boxes two">
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/app-toolbar.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/app-toolbar.png' | relative_url }}" alt="screehshot" class="responsive">
 						<p>Aplikační nabídka se přesunula do lišty prostředí.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/notifications.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/notifications.png' | relative_url }}" alt="screehshot" class="responsive">
 						<p>Notifikace jsou nyní přehledně vypsány v jedné nabídce spolu s hodinami i kalendářem.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/app-menu.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/app-menu.png' | relative_url }}" alt="screehshot" class="responsive">
 						<p>Všechny vaše aplikace najdete snadno přes tlačítko menu v levém dolním okraji displeje.</p>
 					</div>
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/screenshots/ubuntu-18.04/activities.png" alt="screehshot" class="responsive">
+						<img src="{{ 'images/screenshots/ubuntu-18.04/activities.png' | relative_url }}" alt="screehshot" class="responsive">
 						<p>Mezi aplikacemi se můžete přepínat standardně skrze klávesovou zkratku Alt+Tab nebo přes tlačítko Činnosti v levém horním okraji displeje, kde uvidíte kromě aktivních aplikací také přehled o virtuálních plochách (v pravé části displeje).</p>
 					</div>
 				</li>
@@ -171,7 +182,7 @@
 	<div class="wrapper">
 		<article class="padded info">
 			<h2>Vaše oblíbené aplikace a služby k dispozici</h2>
-			<?php include("parts/apps-games-overview.php"); ?>
+			{% include apps-games-overview.html %}
 		</article>
 	</div>
 </section>

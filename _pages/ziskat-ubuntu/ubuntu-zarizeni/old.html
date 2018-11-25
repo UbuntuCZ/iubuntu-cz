@@ -1,6 +1,12 @@
+---
+title: Telefony a tablety s Ubuntu
+description: Komunítní projekt UBports zpřístupňuje Ubuntu na celé škále zařízení.
+permalink: /ziskat-ubuntu/ubuntu-zarizeni/old
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container fixed-container bottom" style="background-image: url('images/ubports/phone-hero.jpg');"></div>
+		<div class="bg-container fixed-container bottom" style="background-image: url('{{ 'images/ubports/phone-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro smaller">
 				<h1>Telefony a tablety</h1>
@@ -9,86 +15,6 @@
 		</div>
 	</div>
 </section>
-
-<?php if(!preg_match("/(\?|\&)old/i", $_SERVER["REQUEST_URI"])) { ?>
-
-<section class="padded semi-transparent">
-	<div class="wrapper">
-		<div class="padded">
-			<h2>Instalátor Ubuntu Touch</h2>
-		</div>
-		<div class="row-boxes two">
-			<ul>
-				<li>
-					<div class="box">
-						<p>S instalátorem UBports získáte plnohodnotné Ubuntu do kapsy či vašeho tabletu, aniž byste se zapotili. Instalátor podporuje tři hlavní platformy, takže jej můžete spustit takřka na každém počítači. Jednoduše připojte vaše mobilní zařízení k počítači a následujte průvodce instalací.</p>
-						<a href="https://ubuntu-touch.io/get-ut" class="button">Stáhněte si instalátor</a>
-					</div>
-				</li>
-				<li>
-					<div class="box">
-						<img src="images/ubports/ubports-installer.jpg" alt="Meizu PRO 5" class="responsive">
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-</section>
-<section class="padded">
-	<div class="wrapper">
-		<div class="padded">
-			<h2>Zařízení podporovaná komunitou UBports</h2>
-		</div>
-		<div class="row-boxes two">
-			<ul>
-				<li>
-					<div class="box">
-						<h3>Zařízení podporovaná projektem UBports</h3>
-						<ul>
-							<li><strong>OnePlus&nbsp;One (bacon)</strong></li>
-							<li><strong>Bq&nbsp;m10&nbsp;FHD (frieza)</strong></li>
-							<li>Bq&nbsp;m10&nbsp;HD (cooler)</li>
-							<li><strong>Fairphone&nbsp;2 (FP2)</strong></li>
-							<li><strong>Nexus&nbsp;5 (hammerhead)</strong></li>
-							<li>Nexus&nbsp;4 (mako)</li>
-							<li>Meizu&nbsp;Pro&nbsp;5 (turbo)</li>
-							<li>Meizu&nbsp;MX&nbsp;4 (arale)</li>
-							<li>Bq&nbsp;E5 (vegetahd)</li>
-							<li>Bq&nbsp;E4.5 (krillin)</li>
-						</ul>
-					</div>
-				</li>
-				<li>
-					<div class="box">
-						<h3>Komunitní zařízení či zařízení s částečnou podporou</h3>
-						<ul>
-							<li>Standardní Ubuntu 16.04 LTS nebo 18.04 LTS (Instalace prostředí Unity&nbsp;8)</li>
-							<li>Moto&nbsp;G (2014)D (titan), komunitní port</li>
-							<li>Nexus 7 WiFi (flo)</li>
-							<li>Nexus 7 WiFi (deb), <a class="text" href="https://github.com/ubports/ubuntu-touch/issues/643">vyžaduje manuální instalaci</a></li>
-						</ul>
-					</div>
-				</li>
-			</ul>
-			
-			<div class="padded">
-				<p>Aktuální seznam podporovaných zařízení včetně oficiálních komunitních portů naleznete na stránkách projektu Ubports:</p>
-				<p><a href="https://devices.ubuntu-touch.io/" class="button green">devices.ubuntu-touch.io</a></p>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="padded orange">
-	<div class="wrapper">
-		<div class="padded">
-			<a href="<?php $pagesHolder->getPageUrl("get-phone"); ?>?old">
-				<h3>Prohlédněte si specifikace zařízení, která byla přímo v prodeji se systémem Ubuntu Touch &raquo;</h3>
-			</a>
-		</div>
-	</div>
-</section>
-
-<?php } else { ?>
 
 <section class="padded grey" id="old-start">
 	<div class="wrapper">
@@ -107,7 +33,7 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/devices/bqaquarism10-tablet.jpg" alt="BQ Aquaris M10" class="responsive">
+						<img src="{{ 'images/devices/bqaquarism10-tablet.jpg' | relative_url }}" alt="BQ Aquaris M10" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -163,7 +89,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/devices/meizupro5-phone.png" alt="Meizu PRO 5" class="responsive">
+						<img src="{{ 'images/devices/meizupro5-phone.png' | relative_url }}" alt="Meizu PRO 5" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -179,7 +105,7 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/devices/bqe5-phone.png" alt="BQE5" class="responsive">
+						<img src="{{ 'images/devices/bqe5-phone.png' | relative_url }}" alt="BQE5" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -227,7 +153,7 @@
 				</li>
 				<li>
 					<div class="box">
-						<img src="images/devices/bqe4-phone.png" alt="BQE4.5" class="responsive">
+						<img src="{{ 'images/devices/bqe4-phone.png' | relative_url }}" alt="BQE4.5" class="responsive">
 					</div>
 				</li>
 			</ul>
@@ -243,7 +169,7 @@
 			<ul>
 				<li>
 					<div class="box">
-						<img src="images/devices/meizumx4-phone.png" alt="Meizu MX4" class="responsive">
+						<img src="{{ 'images/devices/meizumx4-phone.png' | relative_url }}" alt="Meizu MX4" class="responsive">
 					</div>
 				</li>
 				<li>
@@ -269,10 +195,9 @@
 <section class="padded orange">
 	<div class="wrapper">
 		<div class="padded">
-			<a href="<?php $pagesHolder->getPageUrl("get-phone"); ?>">
+			<a href="{{ site.baseurl }}{% link _pages/ziskat-ubuntu/ubuntu-zarizeni/index.html %}">
 				<h3>Zpět na přehled aktuálně podporovaných zařízení &raquo;</h3>
 			</a>
 		</div>
 	</div>
 </section>
-<?php } ?>

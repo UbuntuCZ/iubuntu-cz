@@ -1,11 +1,17 @@
+---
+title: Server
+description: Ubuntu pro servery, cloud a internet věcí.
+permalink: /server
+layout: default
+---
 <section class="hero">
 	<div class="img-container">
-		<div class="bg-container" style="background-image: url('images/server-hero.jpg');"></div>
+		<div class="bg-container" style="background-image: url('{{ 'images/server-hero.jpg' | relative_url }}');"></div>
 		<div class="wrapper">
 			<div class="intro higher">
 				<h1>Expandujte na serverech</h1>
 				<p>Přední serverová platforma představující široké možnosti škálování vaší infrastruktury. Ať již chcete rozvíjet vaše zázemí na technologii OpenStack cloud, clusterech Hadoop nebo 50 000 uzlovou serverovou farmu, servery Ubuntu dokážete nasadit v nejkratším termínu vůbec.</p>
-				<a href="<?php $pagesHolder->getPageUrl("server-download"); ?>" class="button">Stáhnout Ubuntu Server</a>
+				<a href="{% link _pages/ziskat-ubuntu/stahnout-server.html %}" class="button">Stáhnout Ubuntu Server</a>
 			</div>
 		</div>
 	</div>
@@ -43,21 +49,21 @@
 		<article class="padded">
 			<h2>FUNGUJE S KAŽDÝM VAŠIM HARDWAREM I SOFTWAREM</h2>
 			<ul class="inline-icons">
-				<li class="inactive"><img src="images/partners/logo-lenovo.svg" alt="Lenovo"></li>
-				<li class="inactive"><img src="images/partners/logo-dell.svg" alt="Dell"></li>
-				<li class="inactive"><img src="images/partners/logo-ibm.svg" alt="IBM"></li>
-				<li class="inactive"><img src="images/partners/logo-hp.svg" alt="HP"></li>
-				<li class="inactive last-item"><img src="images/partners/logo-intel.svg" alt="Intel"></li>
-				<li class="inactive"><img src="images/partners/logo-cisco.svg" alt="Cisco"></li>
-				<li class="inactive"><img src="images/partners/logo-amd.svg" alt="AMD"></li>
-				<li class="inactive last-item"><img src="images/partners/logo-arm.svg" alt="Intel"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-lenovo.svg' | relative_url }}" alt="Lenovo"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-dell.svg' | relative_url }}" alt="Dell"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-ibm.svg' | relative_url }}" alt="IBM"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-hp.svg' | relative_url }}" alt="HP"></li>
+				<li class="inactive last-item"><img src="{{ 'images/partners/logo-intel.svg' | relative_url }}" alt="Intel"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-cisco.svg' | relative_url }}" alt="Cisco"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-amd.svg' | relative_url }}" alt="AMD"></li>
+				<li class="inactive last-item"><img src="{{ 'images/partners/logo-arm.svg' | relative_url }}" alt="Intel"></li>
 			</ul>
 
 			<ul class="inline-icons">
-				<li class="inactive"><img src="images/partners/logo-centrify.png" alt="Centrify"></li>
-				<li class="inactive"><img src="images/partners/logo-openstack.svg" alt="OpenStack"></li>
-				<li class="inactive"><img src="images/partners/logo-likewise.png" alt="Likewise"></li>
-				<li class="inactive last-item"><img src="images/partners/logo-openbravo.png" alt="Openbravo"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-centrify.png' | relative_url }}" alt="Centrify"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-openstack.svg' | relative_url }}" alt="OpenStack"></li>
+				<li class="inactive"><img src="{{ 'images/partners/logo-likewise.png' | relative_url }}" alt="Likewise"></li>
+				<li class="inactive last-item"><img src="{{ 'images/partners/logo-openbravo.png' | relative_url }}" alt="Openbravo"></li>
 			</ul>
 		</article>
 	</div>
