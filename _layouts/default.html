@@ -11,7 +11,7 @@
 			<a href="{{ site.baseurl }}/" class="title">Ubuntu</a>
 
 			<nav>
-				{% include menu.html %}
+				{% include menu.html items=site.data.menu.pages %}
 			</nav>
 
 			<div class="menuHide" onclick="toggleClassName(this.parentNode.parentNode, 'show');">
