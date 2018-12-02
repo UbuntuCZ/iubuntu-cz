@@ -61,6 +61,7 @@ GEM
     minitest (5.11.3)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    open_uri_redirections (0.2.1)
     parallel (1.12.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -90,6 +91,7 @@ DEPENDENCIES
   html-proofer (~> 3.9, >= 3.9.2)
   jekyll (~> 3.8, >= 3.8.5)
   jekyll-redirect-from (~> 0.14.0)
+  open_uri_redirections (~> 0.2.1)
 
 BUNDLED WITH
    1.16.1
