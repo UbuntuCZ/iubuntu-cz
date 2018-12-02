@@ -26,18 +26,28 @@ layout: default
 					<li>
 						<div class="box">
 							<ol class="releases">
-							<?php
-								$releases = UbuntuReleases::getInstance();
-								$counter = 0;
-								foreach(array_reverse($releases->getReleases()) as $release) {
-									echo "<li class=\"" . $release->status . "\">" . $release->readableRelDate . " - " . $release->name . ($release->lts ? " LTS" : "");
-									if($counter <= 10) {
-										echo "<br>Podporováno do " . $release->readableEndMonthVarCS;
-									}
-									echo "<div class=\"baloon\"></div></li>\n";
-									$counter++;
-								}
-							?>
+								{% assign counter = 0 %}
+								{% assign now = 'now' | date: "%s" %}
+								{% for release in site.data.ubuntu_versions.all reversed %}
+									{% assign released = release.released | date: "%s" %}
+									{% assign deprecated = release.eol | date: "%s" %}
+									{% if released > now %}
+										{% assign state = "future" %}
+									{% elsif deprecated > now %}
+										{% assign state = "current" %}
+									{% else %}
+										{% assign state = "past" %}
+									{% endif %}
+									<li class="{{ state }}{% if release.lts == true %} lts{% endif %}">
+										{{ release.released | date: "%-d. %-m. %Y" }} - {{ release.name }}{% if release.lts == true %} LTS{% endif %}
+										{% if counter <= 10 %}
+											<br>
+											Podporováno do {{ release.eol | date: "%-d. %-m. %Y" }}
+										{% endif %}
+										<div class="baloon"></div>
+									</li>
+									{% assign counter = counter | plus: 1 %}
+								{% endfor %}
 							</ol>
 						</div>
 					</li>
