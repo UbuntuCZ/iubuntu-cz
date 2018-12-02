@@ -1,10 +1,3 @@
-release:
-  version: "18.10"
-  name: Cosmic Cuttlefish
-lts:
-  version: "18.04"
-  name: Bionic Beaver
-  released: 2018-04-26
 all:
   - version: "4.10"
     name: Warty Warthog

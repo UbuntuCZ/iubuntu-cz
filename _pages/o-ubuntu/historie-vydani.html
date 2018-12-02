@@ -28,7 +28,7 @@ layout: default
 							<ol class="releases">
 								{% assign counter = 0 %}
 								{% assign now = 'now' | date: "%s" %}
-								{% for release in site.data.ubuntu_versions.all reversed %}
+								{% for release in site.data.ubuntu_releases.all reversed %}
 									{% assign released = release.released | date: "%s" %}
 									{% assign deprecated = release.eol | date: "%s" %}
 									{% if released > now %}
