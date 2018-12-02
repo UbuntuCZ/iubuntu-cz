@@ -14,7 +14,7 @@ module Jekyll_Get_Remote_Content
       if !config.kind_of?(Array)
         config = [config]
       end
-      Dir.mkdir 'remoteContent'
+      Dir.mkdir('remoteContent') unless Dir.exist?('remoteContent')
       config.each do |remote|
         open(remote['url'], 'r', :allow_redirections => :all) do |remote_content|
           open('remoteContent/'+remote['name'], 'wb') do |local_file|
