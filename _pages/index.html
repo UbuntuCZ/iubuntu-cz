@@ -125,12 +125,12 @@ layout: default
 		capitalizeFirst: true
 	});
 	new RSS({
-		url: "{{ site.baseurl }}{% link remoteContent/ubuntu_blog.xml %}",
+		url: "{{ site.baseurl }}{% link remote_content/ubuntu_blog.xml %}",
 		count: 4,
 		translator
 	}).appendTo(document.getElementById("rss-feed"));
 	new RSS({
-		url: "{{ site.baseurl }}{% link remoteContent/omgubuntu.xml %}",
+		url: "{{ site.baseurl }}{% link remote_content/omgubuntu.xml %}",
 		count: 4,
 		translator
 	}).appendTo(document.getElementById("rss-feed-omgubuntu"));

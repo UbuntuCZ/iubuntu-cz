@@ -107,7 +107,7 @@ class RSSChannel {
 class RSS {
 	constructor(data) {
 		data = data || {};
-		this.url = data.url || "remoteContent/ubuntu_blog.xml";
+		this.url = data.url || "remote_content/ubuntu_blog.xml";
 		this.xml = null;
 		this.object = null;
 		this.loadingOverlay = null;
