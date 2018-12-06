@@ -2,7 +2,7 @@
   {% if p.permalink == include.item.url %}
     <li class="{% if page.url contains p.url %}current{% endif %} {% if include.item.sub %}top-level{% endif %}">
       <a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a>
-      {% if include.show_description %}<span class="description">{{ p.description }}</<span>{% endif %}
+      {% if include.show_description %}<span class="description">{{ p.description }}</span>{% endif %}
       {% if include.item.sub %}
         <div class="submenu">
           {% include menu.html items=include.item.sub show_description=true %}
