@@ -122,7 +122,8 @@ layout: default
 <script src="{{ 'design/rssES6.js' | relative_url }}"></script>
 <script>
 	let translator = new ENCZTranslator({
-		capitalizeFirst: true
+		capitalizeFirst: true,
+		dataLocation: "{{ 'design/translator/data.json' | relative_url }}"
 	});
 	new RSS({
 		url: "{{ site.baseurl }}{% link remote_content/ubuntu_blog.xml %}",

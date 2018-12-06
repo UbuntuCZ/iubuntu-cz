@@ -114,7 +114,7 @@ class RSS {
 		this.count = data.count || 4;
 		this.channels = [];
 		
-		this.translator = data.translator || new ENCZTranslator();
+		this.translator = data.translator;
 		
 		this.loadData().then((response) => {
 			this.xml = response;
