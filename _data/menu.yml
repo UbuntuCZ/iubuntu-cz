@@ -19,3 +19,15 @@ pages:
       - url: /o-ubuntu/
       - url: /o-ubuntu/cyklus-vydani/
       - url: /o-ubuntu/historie-vydani/
+  - external: true
+    url: /podpora
+    title: Pomoc
+    sub:
+      - external: true
+        url: http://forum.ubuntu.cz/
+        title: Fórum
+        description: České fórum podpory, kde se můžete zeptat, poradit ostatním nebo jentak diskutovat o Ubuntu.
+      - external: true
+        url: http://wiki.ubuntu.cz/
+        title: Wiki
+        description: Česká wiki s rozsáhlou sbírkou návodů a dokumentace k operačnímu systému Ubuntu.
