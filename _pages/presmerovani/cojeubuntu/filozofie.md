@@ -1,5 +1,5 @@
 ---
-permalink: /cojeubuntu/filozofie
+permalink: /cojeubuntu/filozofie/
 redirect_from:
   - /komunita/pribehubuntu/filozofie
 redirect_to:

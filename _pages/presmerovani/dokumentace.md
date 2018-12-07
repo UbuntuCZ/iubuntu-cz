@@ -1,5 +1,5 @@
 ---
-permalink: /dokumentace
+permalink: /dokumentace/
 redirect_from:
   - /podpora/dokumentace
   - /komunita/zapojtese/dokumentace

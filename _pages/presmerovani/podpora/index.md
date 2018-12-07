@@ -1,5 +1,5 @@
 ---
-permalink: /podpora
+permalink: /podpora/
 redirect_from:
   - /komunita/zapojtese/podpora
   - /podpora/komunita

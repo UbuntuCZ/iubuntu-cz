@@ -1,5 +1,5 @@
 ---
-permalink: /cojeubuntu/licence
+permalink: /cojeubuntu/licence/
 redirect_from:
   - /komunita/pribehubuntu/licence
   - /komunita/pribehubuntu/zdroje
