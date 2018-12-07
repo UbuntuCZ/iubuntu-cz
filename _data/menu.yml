@@ -19,8 +19,7 @@ pages:
       - url: /o-ubuntu/
       - url: /o-ubuntu/cyklus-vydani/
       - url: /o-ubuntu/historie-vydani/
-  - external: true
-    url: /podpora
+  - url: /podpora/
     title: Pomoc
     sub:
       - external: true
