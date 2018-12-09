@@ -1,5 +1,5 @@
 ---
-permalink: /tour
+permalink: /tour/
 redirect_from:
   - /sites/www.ubuntu.cz/tour
   - /tour/cs
