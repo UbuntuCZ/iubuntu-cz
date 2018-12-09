@@ -19,9 +19,11 @@ pages:
       - url: /o-ubuntu/
       - url: /o-ubuntu/cyklus-vydani/
       - url: /o-ubuntu/historie-vydani/
-  - url: /podpora/
-    title: Pomoc
+      - url: /komunita/
+  - url: /komunita/
+    title: Komunita a pomoc
     sub:
+      - url: /komunita/
       - external: true
         url: http://forum.ubuntu.cz/
         title: Fórum
