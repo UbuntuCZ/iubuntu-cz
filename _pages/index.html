@@ -115,20 +115,16 @@ layout: default
 </section>
 
 <script src="{{ 'design/translator.js' | relative_url }}"></script>
-<script src="{{ 'design/rssES6.js' | relative_url }}"></script>
 <script>
-	let translator = new ENCZTranslator({
-		capitalizeFirst: true,
-		dataLocation: "{{ 'design/translator/data.json' | relative_url }}"
-	});
-	new RSS({
-		url: "{{ site.baseurl }}{% link remote_content/ubuntublog.xml %}",
-		count: 4,
-		translator
-	}).appendTo(document.getElementById("rss-feed"));
-	new RSS({
-		url: "{{ site.baseurl }}{% link remote_content/omgubuntu.xml %}",
-		count: 4,
-		translator
-	}).appendTo(document.getElementById("rss-feed-omgubuntu"));
+  const translator = new ENCZTranslator({
+    capitalizeFirst: true,
+    dataLocation: "{{ 'design/translator/data.json' | relative_url }}"
+  });
+  [...document.querySelectorAll('.rss-feed h3 a')].forEach(titleLink => {
+    translator.translate(titleLink.textContent).then((response) => {
+      titleLink.textContent = response;
+    }).catch((error) => {
+      console.error(error, 'Could not fetch translations from Translator.js');
+    });
+  });
 </script>
