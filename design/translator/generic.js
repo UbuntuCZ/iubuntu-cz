@@ -114,6 +114,19 @@ class Translator {
 		});
 	}
 	
+	defaultTranslate(string, resolve, reject) {
+		if(!this.loadInProgress) {
+			this.load("default").then((response) => {
+				this.translate(string).then((response) => resolve(response)).catch((reason) => reject(reason));
+			}).catch((reason) => {
+				console.error("[Translator] Could not load default engine");
+			});
+		}
+		else {
+			this.translate(string).then((response) => resolve(response)).catch((reason) => reject(reason));
+		}
+	}
+	
 	/*
 	 * Abstract translate method - every translator needs to implement this and return a promise with a respective translation
 	 * 
@@ -146,16 +159,7 @@ class Translator {
 			}).catch((error) => {
 				if(this.engine !== "default") {
 					console.error("[Translator] Could not translate string", string, "using " + this.engine + " engine");
-					if(!this.loadInProgress) {
-						this.load("default").then((response) => {
-							this.translate(string).then((response) => resolve(response)).catch((reason) => reject(reason));
-						}).catch((reason) => {
-							console.error("[Translator] Could not load default engine");
-						});
-					}
-					else {
-						this.translate(string).then((response) => resolve(response)).catch((reason) => reject(reason));
-					}
+					this.defaultTranslate(string, resolve, reject); // Try default engine
 				}
 				else {
 					console.error("[Translator] Could not translate string", string, "using default engine");
