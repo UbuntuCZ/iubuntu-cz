@@ -41,7 +41,7 @@ class Translator {
 			},
 			google: {
 				path: this.scriptsPath + "google-translator.js",
-				apiKey: null
+				apiKey: "AIzaSyC9eU5PTMx_RiwijIZzJuLKiyhCJNhLg0c"
 			},
 			yandex: {
 				path: this.scriptsPath + "yandex-translator.js",
