@@ -4,7 +4,7 @@ class TranslationService {
 	constructor(data) {
 		data = data || {};
 		this.url = data.url || "https://translation.googleapis.com/language/translate/v2";
-		this.apiKey = data.apiKey || "";
+		this.apiKey = data.apiKey || "AIzaSyC9eU5PTMx_RiwijIZzJuLKiyhCJNhLg0c";
 		this.sourceLanguage = data.sourceLanguage || "en";
 		this.destinationLanguage = data.destinationLanguage || "cs";
 		this.dependencies = data.dependencies || [];
