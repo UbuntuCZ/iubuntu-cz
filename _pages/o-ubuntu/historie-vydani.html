@@ -47,12 +47,12 @@ layout: default
       <div class="padded">
         <h2>Seznam vydaných a budoucích verzí Ubuntu</h2>
       </div>
-      <div class="row-boxes mobile-reverse">
+      <div class="row-boxes two mobile-reverse">
         <ul>
           <li>
             <div class="box">
               <ol class="releases">
-                {% assign counter = 0 %}
+                {% assign counter = 1 %}
                 {% assign now = 'now' | date: "%s" %}
                 {% for release in site.data.ubuntu_releases.all reversed %}
                   {% assign released = release.released | date: "%s" %}
@@ -65,16 +65,27 @@ layout: default
                     {% assign state = "past" %}
                   {% endif %}
                   <li class="{{ state }}{% if release.lts == true %} lts{% endif %}">
-                    {% if released != blank %}{{ release.released | date: "%-d. %-m. %Y" }} - {% endif %}
-                    {{ release.name }}{% if release.lts == true %} LTS{% endif %}
-                    {% if eol != blank %}
-                    <br>
-                    Podporováno do {{ release.eol | date: "%-d. %-m. %Y" }}
+                    Ubuntu {{ release.version }}{% if release.lts == true %} LTS{% endif %} - {{ release.name }}
+                    {% if release.released != blank %}
+                      <br>
+                      {% if state == "future" %}
+                        Vyjde {{ release.released | date: "%-d. %-m. %Y" }}
+                      {% else %}
+                        Vydáno {{ release.released | date: "%-d. %-m. %Y" }}
+                      {% endif %}
+                    {% endif %}
+                    {% if release.eol != blank %}
+                      <br>
+                      {% if state == "past" %}
+                        Podpora ukončena {{ release.eol | date: "%-d. %-m. %Y" }}
+                      {% else %}
+                        Podporováno do {{ release.eol | date: "%-d. %-m. %Y" }}
+                      {% endif %}
                     {% endif %}
                     <div class="baloon"></div>
                   </li>
                   {% assign counter = counter | plus: 1 %}
-                  {% if counter > 10 %}
+                  {% if counter > 12 %}
                     {% break %}
                   {% endif %}
                 {% endfor %}
