@@ -71,12 +71,12 @@ layout: default
                     <br>
                     Podporováno do {{ release.eol | date: "%-d. %-m. %Y" }}
                     {% endif %}
-                    {% if counter > 10 %}
-                      {% break %}
-                    {% endif %}
                     <div class="baloon"></div>
                   </li>
                   {% assign counter = counter | plus: 1 %}
+                  {% if counter > 10 %}
+                    {% break %}
+                  {% endif %}
                 {% endfor %}
               </ol>
             </div>
