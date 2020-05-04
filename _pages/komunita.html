@@ -12,13 +12,12 @@ redirect_from:
   - /kontakty
 layout: default
 ---
-<section class="hero">
-  <div class="img-container">
-    <div class="bg-container fixed-container" style="background-image: url('{{ 'images/mountains-hero.jpg' | relative_url }}');"></div>
-    <div class="wrapper">
-      <div class="intro">
+<section class="p-strip--image is-deep is-light" style="background-image: url('{{ 'images/mountains-hero.jpg' | relative_url }}'); background-size: cover; background-position: top 25% center;">
+  <div class="row">
+    <div class="col-6">
+      <div class="p-card--overlay">
         <h1>Komunita Ubuntu</h1>
-        <p>
+        <p class="p-card__content">
           Komunitu Ubuntu tvoří jednotlivci i týmy pracující na různých součástech distribuce, poskytují rady a technickou podporu a pomáhají prosazovat Ubuntu v širší veřejnosti.
         </p>
       </div>
@@ -59,7 +58,7 @@ layout: default
   </div>
 </section>
 
-<section class="p-strip">
+<section class="p-strip is-bordered">
   <div class="row">
     <div class="col-12">
       <h2>Zapojte se</h2>
