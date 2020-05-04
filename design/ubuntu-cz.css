@@ -48,3 +48,38 @@
     color: #e95420 !important;
   }
 }
+
+/*** footer ***/
+
+footer {
+  font-size: 0.875rem;
+}
+
+footer .nav__item--current > * {
+  color: #e95420 !important;
+}
+
+footer .p-inline-list--social {
+  font-size: 2rem;
+}
+
+footer .p-inline-list--social a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer .p-inline-list--social .github a:hover {
+	color: #24292e;
+}
+
+footer .p-inline-list--social .mastodon a:hover {
+	color: #3088d4;
+}
+
+footer .p-inline-list--social .telegram a:hover {
+	color: #179cde;
+}
+
+footer .p-inline-list--social .twitter a:hover {
+	color: #1da1f2;
+}
