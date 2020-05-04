@@ -1,7 +1,7 @@
 <footer>
   <div class="p-strip--light is-bordered is-shallow u-clearfix">
     <div class="u-fixed-width">
-      <p class="u-hide--medium u-hide--large"><a href="#"><small>Zpět nahoru</small></a></p>
+      <p class="u-hide--medium u-hide--large"><a class="p-top" href="#">Zpět nahoru</a></p>
     </div>
     <div class="row">
       {% include navigation_footer.html items=site.data.navigation.pages %}
@@ -10,23 +10,20 @@
 
   <div class="p-strip--light is-bordered is-shallow u-clearfix">
     <div class="row">
-      <div class="col-3">
-        <strong>Externí odkazy:</strong>
-      </div>
       <nav class="col-3">
         <ul class="u-no-margin u-no-padding">
-          <li><strong><a href="https://www.ubuntu.com/" target="_blank">Oficiální stránky projektu Ubuntu</a></strong></li>
-          <li><a href="https://www.ubuntu.com/tutorials/" target="_blank">Tutoriály pro vývojáře</a></li>
-          <li><a href="https://help.ubuntu.com/" target="_blank">Dokumentace</a></li>
-          <li><a href="https://askubuntu.com/" target="_blank">Ask Ubuntu</a></li>
+          <li><strong><a href="https://www.ubuntu.com/" class="p-link--external" target="_blank">Oficiální stránky projektu Ubuntu</a></strong></li>
+          <li><a href="https://www.ubuntu.com/tutorials/" class="p-link--external" target="_blank">Tutoriály pro vývojáře</a></li>
+          <li><a href="https://help.ubuntu.com/" class="p-link--external" target="_blank">Dokumentace</a></li>
+          <li><a href="https://askubuntu.com/" class="p-link--external" target="_blank">Ask Ubuntu</a></li>
         </ul>
       </nav>
       <nav class="col-3">
         <ul class="u-no-margin u-no-padding">
-          <li><strong><a href="https://status.ubuntu.cz/" target="_blank">Dostupnost Ubuntu.cz</a></strong></li>
+          <li><strong><a href="https://status.ubuntu.cz/" class="p-link--external" target="_blank">Dostupnost Ubuntu.cz</a></strong></li>
         </ul>
       </nav>
-      <div class="col-3">
+      <div class="col-6 u-align--center">
         <strong>Sledujte nás na sociálních sítích</strong>
         <ul class="p-inline-list p-inline-list--social u-no-margin u-no-padding">
           <li class="p-inline-list__item mastodon"><a rel="me" href="https://floss.social/@UbuntuCZ" target="_blank" title="Mastodon">
