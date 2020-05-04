@@ -1,3 +1,14 @@
+/*** content ***/
+@media (min-width: 772px) {
+  .p-inline-images--narrow-margin .p-inline-images__item {
+    margin: 1rem;
+  }
+}
+
+img.black-to-white {
+  filter: brightness(0) invert(1);
+}
+
 /*** main navigation ***/
 
 @media (min-width: 772px) {
