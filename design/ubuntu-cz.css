@@ -1,4 +1,5 @@
 /*** content ***/
+.p-strip--dark a,
 .p-strip--image.is-dark a {
   color: white !important;
 }
